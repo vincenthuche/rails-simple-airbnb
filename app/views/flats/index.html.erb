@@ -1,0 +1,31 @@
+<div class="container mt-3">
+
+ <!-- <div class="navbar navbar-expand-lg navbar-light bg-light">
+ </div> -->
+
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Flats</h1>
+    </div>
+  </div>
+
+  <div class="flat-card">
+    <% @flats.each do |flat| %>
+    <div class="flat">
+        <%= link_to flat.name, flat_path(flat)%>
+        <br>
+        <%= flat.address %>
+        <br>
+        <%= flat.description %>
+        <br>
+        <%= flat.price_per_night %>
+        <br>
+        <%= flat.number_of_guests %>
+        <br>
+    </div>
+    <% end %>
+  </div>
+
+<%= link_to "Add a new flat", new_flat_path%>
+
+</div>
